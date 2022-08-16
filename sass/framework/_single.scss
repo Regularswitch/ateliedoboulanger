@@ -1,0 +1,235 @@
+.single {
+  padding: 100px 40px 0 40px;
+  margin-bottom: 40px;
+  width: auto;
+
+  @include respond-to(belowIpad) {
+	margin-bottom: 20px;
+  }
+
+  .single__title {
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid $blue;
+  }
+
+  .single__img {
+	margin-bottom: 40px;
+	width: 100%;
+
+	img {
+	  width: 100%;
+	  height: 300px;
+	  border-radius: 3px;
+	  object-fit: cover;
+	}
+  }
+
+  .single__container_2c {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+
+	.left {
+	  height: auto;
+	  padding: 20px 0;
+	  margin-right: 20px;
+	  flex: 1;
+
+	  @include respond-to(belowIpad) {
+		margin: 0;
+	  }
+
+	  &.title {
+		position: relative;
+		&:after {
+		  content: "";
+		  position: absolute;
+		  left: 0;
+		  bottom: 0;
+		  height: 1px;
+		  width: 30px;
+		  border-bottom: 3px solid $black;
+		}
+	  }
+	  .item {
+		padding: 10px 0;
+		border-bottom: 1px solid $blue;
+	  }
+	}
+	.right {
+	  height: auto;
+	  padding: 20px 0;
+	  margin-left: 20px;
+	  flex: 2;
+
+	  @include respond-to(belowIpad) {
+		margin: 0;
+	  }
+
+	  .item {
+		padding: 10px 0;
+		border-bottom: 1px solid $blue;
+	  }
+	}
+
+	.content {
+	  padding-bottom: 20px;
+	  border-bottom: 3px solid $blue;
+	}
+	@include respond-to(belowIpad) {
+	  width: 100%;
+	  flex-direction: column;
+	}
+  }
+
+  .single__container_iphone {
+	margin: 10px 0;
+	div {
+	  margin: 10px 0;
+	}
+  }
+
+  .single__container {
+	width: 100%;
+	height: auto;
+
+	.single__detail {
+	  padding: 20px 0;
+	  position: relative;
+	  &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 30px;
+		border-bottom: 3px solid $black;
+	  }
+	}
+  }
+
+  .single__price {
+	float: right;
+	width: 33.3%;
+	margin: 20px 0;
+
+	.single__price_total {
+	  border-bottom: 3px solid $blue;
+	  display: flex;
+	  .left {
+		flex: 1;
+	  }
+	  .price {
+		text-align: right;
+	  }
+	  .right {
+		flex: 1;
+	  }
+	}
+	.single__price_buy {
+	  margin: 10px 0;
+
+	  .button {
+		width: 50%;
+		@include respond-to(belowIpad) {
+		  width: 100%;
+		  margin: 40px 0 0 0;
+		}
+	  }
+	}
+	@include respond-to(belowIpad) {
+	  float: none;
+	  width: 100%;
+	}
+  }
+
+  .single__pictos_container {
+	position: absolute;
+	top: -80px;
+	left: 0;
+	width: 100%;
+
+	.pain11 {
+	  width: 250px;
+	  z-index: -1;
+	  position: absolute;
+	  top: 100px;
+	  left: -130px;
+	}
+	.pain05 {
+	  z-index: -1;
+	  position: absolute;
+	  top: 40px;
+	  left: 250px;
+	}
+	.pain04 {
+	  z-index: -1;
+	  position: absolute;
+	  top: 130px;
+	  right: -80px;
+	}
+
+	.picto6__blue {
+	  z-index: -1;
+	  position: absolute;
+	  top: 250px;
+	  left: 550px;
+	}
+	.picto7__blue {
+	  z-index: -1;
+	  position: absolute;
+	  top: 200px;
+	  right: 120px;
+	  transform: rotate(180deg);
+	}
+	.picto14__red {
+	  z-index: -1;
+	  position: absolute;
+	  top: 170px;
+	  left: 300px;
+	}
+	.picto2__red {
+	  z-index: -1;
+	  position: absolute;
+	  top: 250px;
+	  right: 300px;
+	}
+
+	@include respond-to(belowIpadInc) {
+	  .pain04 {
+		display: none;
+	  }
+	  .pain05 {
+		transform: rotate(10deg);
+	  }
+	  .picto7__blue {
+		display: none;
+	  }
+	}
+  }
+
+  .single__picto_container_iphone{
+	.pain11 {
+	  width: 250px;
+	  z-index: -1;
+	  position: absolute;
+	  top: -40px;
+	  left: -130px;
+	}
+
+	.picto14__red {
+	  z-index: -1;
+	  position: absolute;
+	  top: 70px;
+	  left: 300px;
+	}
+	.picto6__blue {
+	  z-index: -1;
+	  position: absolute;
+	  top: 220px;
+	  left: 10px;
+	}
+  }
+}

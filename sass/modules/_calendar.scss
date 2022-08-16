@@ -1,0 +1,291 @@
+$calendar-fade-color: #c0c0c0;
+
+.calendar {
+	margin: 40px 0;
+
+	.calendar__title {
+		margin-bottom: 40px;
+		@include respond-to(belowIpad) {
+			padding: 0 20px;
+		}
+	}
+
+	.calendar__container {
+		width: auto;
+		min-height: 480px;
+		display: flex;
+		@include respond-to(belowIpadInc) {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		.calendar__resume {
+			position: relative;
+			background-color: $blue;
+			padding: 20px;
+			margin-right: 10px;
+			border-radius: 3px;
+			width: 300px;
+
+			@include respond-to(belowIpadInc) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.calendar__resume_inactive {
+				display: none;
+				position: absolute;
+				top: 170px;
+				left: 50%;
+				transform: translate(-50%, -100%) rotate(-10deg);
+
+				width: 160px;
+				height: 40px;
+				font-family: $fontBlack;
+				color: white;
+				text-align: center;
+				font-size: 22px;
+				line-height: 40px;
+				background-color: $red;
+				@include rounded-corner(3px);
+				box-shadow: 0 3px 20px -3px rgba(0, 0, 0, 0.5);
+
+				&.show {
+
+					display: block;
+				}
+			}
+			.calendar__head {
+				@include respond-to(belowIpadInc) {
+					width: 50%;
+					float: left;
+					border-right: 1px solid white;
+				}
+				@include respond-to(belowIpad) {
+					float: none;
+					width: 100%;
+					border: none;
+				}
+			}
+			.calendar__content {
+				@include respond-to(belowIpadInc) {
+					width: 50%;
+					float: left;
+					margin-top: 50px;
+				}
+				@include respond-to(belowIpad) {
+					float: none;
+					width: 100%;
+				}
+			}
+			.calendar__day {
+				text-align: center;
+			}
+
+			.calendar__day_number {
+				padding: 20px 0;
+				text-align: center;
+				font-size: 200px;
+				font-weight: 900;
+				line-height: 190px;
+				border-bottom: 1px solid white;
+				@include respond-to(belowIpadInc) {
+					border: none;
+				}
+				@include respond-to(belowIpad) {
+					border-bottom: 1px solid white;
+				}
+			}
+
+			.curso__title {
+				padding: 20px;
+				height: 125px;
+				text-align: center;
+
+				&.inactive {
+					opacity: .5;
+					cursor: default;
+				}
+			}
+
+			.button_curso {
+				height: auto;
+				padding: 10px 0;
+				text-align: center;
+				margin: auto;
+				width: 70%;
+				height: auto;
+				&.button__curso_special, &.button__curso_carte {
+					display: none;
+					&.show {
+						display: flex;
+					}
+				}
+			}
+		}
+		.calendar--wrapper {
+			width: 100%;
+			margin-left: 10px;
+			padding: 5px;
+			background-color: $grey;
+			border-top: 2px solid $red;
+			flex: 3;
+
+			@include respond-to(belowIpadInc) {
+				width: 100%;
+				margin: 0;
+				flex: 1;
+			}
+		}
+	}
+
+	table {
+		clear: both;
+		width: 100%;
+		border-radius: 5px;
+		border-collapse: collapse;
+	}
+
+	td {
+		height: 55px;
+		text-align: center;
+		color: $red;
+		vertical-align: middle;
+		width: calc(100% / 7);
+
+	}
+
+	td.not-current {
+		color: $calendar-fade-color;
+	}
+
+	td.normal {
+	}
+
+	td.today {
+		font-size: 24px;
+	}
+
+	td.firstLastDay {
+		border: 5px solid $grey;
+		padding: 0 5px;
+
+		&.active span {
+			display: block;
+			border: 1px solid white;
+
+			padding: 7px 0 7px 0;
+		}
+	}
+	td.firstDay {
+		border-left: 5px solid $grey;
+		border-top: 5px solid $grey;
+		border-bottom: 5px solid $grey;
+		padding-left: 5px;
+
+		&.active span {
+			display: block;
+			border-left: 1px solid white;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+
+			padding: 7px 0 7px 0px;
+		}
+	}
+
+	td.middleDay {
+		border-top: 5px solid $grey;
+		border-bottom: 5px solid $grey;
+
+		&.active span {
+			display: block;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			padding: 7px 0;
+		}
+	}
+
+	td.lastDay {
+		border-right: 5px solid $grey;
+		border-bottom: 5px solid $grey;
+		border-top: 5px solid $grey;
+		padding-right: 5px;
+
+		&.active span {
+			display: block;
+			border-right: 1px solid white;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			padding: 7px 0px 7px 0;
+		}
+	}
+
+	td.curso-carte {
+		background-color: $green;
+		cursor: pointer;
+		color: $greenDark;
+		&:hover, &.active {
+			background-color: $greenDark;
+			font-family: $fontBold;
+			color: white;
+
+			&.not-current {
+				opacity: .6;
+				//color: $greyDark;
+			}
+		}
+	}
+
+	td.curso-especial, td.curso-nivel{
+		background-color: $redFade;
+		cursor: pointer;
+		&:hover, &.active {
+			background-color: $red;
+			font-family: $fontBold;
+			color: white;
+
+		&.not-current {
+			opacity: .6;
+			color: $greyDark;
+		}
+		}
+	}
+
+
+	thead td {
+	}
+
+	thead tr td {
+		border-bottom: 2px solid $red;
+	}
+
+	tbody tr td {
+		&.normal, &.today {
+		}
+	}
+
+	#btnPrev {
+		float: left;
+	}
+	#btnNext {
+		float: right;
+	}
+	#btnCurrMonth {
+		margin: auto;
+		display: block;
+	}
+
+	#btnPrev, #btnNext, #btnCurrMonth {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		&:hover {
+			font-weight: bold;
+		}
+		&.inactive {
+			opacity: .3;
+			cursor: default;
+		}
+	}
+}
+

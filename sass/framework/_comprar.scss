@@ -1,0 +1,196 @@
+.comprar {
+	padding: 80px 40px 0 40px;
+	margin-bottom: 40px;
+	.comprar__panel_top {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+		.comprar__curso_reusme {
+			flex: 1;
+			div,
+			h2 {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.comprar__pessoa {
+		margin-bottom: 40px;
+		flex: 1;
+		label,
+		div {
+			margin-bottom: 10px;
+			padding: 0 10px 0 0;
+			cursor: pointer;
+		}
+		[type="radio"] {
+			display: none;
+		}
+		input[type=radio]+label:before {
+			background: $white;
+			border: 2px solid $blue;
+			border-radius: 50%;
+			margin-top: -3px;
+			margin-right: 6px;
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			width: 15px;
+			height: 15px;
+		}
+		input[type=radio]:checked+label:before {
+			background: $blue;
+			border-color: $blue;
+			box-shadow: inset 0px 0px 0px 2px #fff;
+		}
+	}
+	.comprar__form {
+		width: 60%;
+		@include respond-to(belowIpadInc) {
+			width: 100%;
+		}
+		.fisica {
+			isplay: block;
+			opacity: 1;
+		}
+		.juridica {
+			display: none;
+			opacity: 0;
+		}
+		.quantite {
+			width: 15%;
+			float: left;
+			@include respond-to(belowIpad) {
+				width: 50%;
+				margin-right: 20px;
+			}
+		}
+		.comprar__curso_price {
+			padding: 12px;
+		}
+		.comprar__total_price {
+			width: 40%;
+			float: right;
+			padding: 12px;
+			border-bottom: 3px solid $blue;
+			margin-bottom: 20px;
+			h5 {
+				float: right;
+				@include respond-to(belowIpad) {
+					float: none;
+				}
+			}
+			@include respond-to(belowIpad) {
+				width: 100%;
+				margin-right: 0px;
+			}
+		}
+		.comprar__form_button {
+			width: 40%;
+			float: right;
+			@include respond-to(belowIpad) {
+				width: 100%;
+			}
+		}
+	  .comprar__payment_info {
+		div {
+		  color: $blue;
+		  margin-bottom: 5px;
+		}
+		margin-top: 20px;
+		color: $blue;
+		font-size: 13px;
+		line-height: 15px;
+	  }
+	}
+	.comprar__picto_container {
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		.picto2__blue {
+			position: absolute;
+			top: 220px;
+			right: 120px;
+		}
+		.picto5__blue {
+			position: absolute;
+			top: 430px;
+			right: 340px;
+		}
+		.picto7__blue {
+			position: absolute;
+			top: 160px;
+			right: 570px;
+			transform: rotate(180deg);
+		}
+		.picto3__red {
+			position: absolute;
+			top: 330px;
+			right: 350px;
+			transform: rotate(20deg);
+		}
+		.pain16 {
+			height: 690px;
+			width: 310px;
+			z-index: -2;
+			position: absolute;
+			top: 100px;
+			right: 40px;
+			transform: rotate(-13deg);
+		}
+		.pain10 {
+			width: 500px;
+			z-index: -1;
+			position: absolute;
+			top: 280px;
+			right: 260px;
+			transform: rotate(-60deg);
+		}
+		.pain04 {
+			position: absolute;
+			top: 330px;
+			right: -100px;
+		}
+		.pain03 {
+			z-index: -1;
+			position: absolute;
+			top: 500px;
+			right: 380px;
+		}
+	}
+	.single__picto_container_ipad {
+		.pain16 {
+			height: 690px;
+			width: 310px;
+			z-index: -2;
+			position: absolute;
+			top: 150px;
+			right: -100px;
+			transform: rotate(-13deg);
+		}
+		.pain10 {
+			width: 500px;
+			z-index: -1;
+			position: absolute;
+			top: 380px;
+			right: 160px;
+			transform: rotate(-60deg);
+		}
+		.picto2__blue {
+			position: absolute;
+			top: 120px;
+			right: 100px;
+		}
+	}
+	.single__picto_container_iphone {
+		.pain10 {
+			width: 500px;
+			z-index: -1;
+			position: absolute;
+			top: 280px;
+			right: 260px;
+			transform: rotate(-60deg);
+		}
+	}
+}

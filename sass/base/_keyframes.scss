@@ -1,0 +1,62 @@
+@keyframes leavesToRight {
+	0%   {left: 50%; opacity: 1;}
+	100% {left: 70%; opacity: 0;}
+}
+@keyframes comesToRight {
+	0%   {left: 30%; opacity: 0;}
+	100% {left: 50%; opacity: 1;}
+}
+
+@keyframes comesFromLeft {
+	0%   {left: -50%; opacity: 0;}
+	100% {left: 0; opacity: 1;}
+}
+@keyframes leavesFromLeft {
+	0%   {left: 0; opacity: 1;}
+	100% {left: -50%; opacity: 0;}
+}
+
+@keyframes translatesOutRight {
+	0%   {transform: translateX(0); opacity: 1;}
+	100% {transform: translateX(20%); opacity: 0;}
+}
+@keyframes translatesInRight {
+	0%   {transform: translateX(-10%); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes translatesInLeft {
+	0%   {transform: translateX(-50%); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes translatesOutLeft {
+	0%   {transform: translateX(0); opacity: 1;}
+	100% {transform: translateX(-50%); opacity: 0;}
+}
+
+@keyframes comesToRightSlow {
+  0% { right: -6%; opacity: 0;}
+  100% {right: -2%;opacity: 1;}
+  @include respond-to(belowIpad) {
+    0% {opacity: 0;}
+    100% { opacity: 1;}
+  }
+}
+@keyframes openBox {
+  0%   {height: 0; opacity: 0}
+  100% {height: auto; opacity: 1}
+}
+
+@mixin slideAnim($name, $delay, $duration, $posStart, $posEnd, $opaStart, $opaEnd, $rotate: '0deg', $translateY: '0px') {
+  @keyframes #{$name} {
+    0% {transform: translateX($posStart) translateY(unquote($translateY)) rotate(unquote($rotate)); opacity: $opaStart;}
+    80% {opacity: $opaStart;}
+    100% {transform: translateX($posEnd) translateY(unquote($translateY)) rotate(unquote($rotate)); opacity: $opaEnd;}
+  }
+  animation-name: #{$name};
+  animation-delay: #{$delay};
+  animation-duration: #{$duration};
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+

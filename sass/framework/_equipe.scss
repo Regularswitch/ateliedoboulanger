@@ -1,0 +1,225 @@
+.equipe {
+    padding: 80px 40px 0 40px;
+    margin-bottom: 40px;
+
+    .equipe__description_content {
+        margin-bottom: 20px;
+        &.subtile {
+            width: 30%;
+        }
+    }
+
+    .equipe__parrain {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+        .equipe__img_parrain {
+            position: relative;
+            width: 50%;
+            margin-bottom: 20px;
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 80%;
+            }
+            img {
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50%;
+            }
+
+        }
+
+        .description {
+            position: relative;
+            width: 50%;
+            height: auto;
+            padding: 30px 0 0 10px;
+            float: right;
+
+            .equipe__parrain_name {
+                width: 40%;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                position: relative;
+                // concerne la barre sous le nom du parrain
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    width: 20%;
+                    border-bottom: 1px solid $blue;
+                }
+            }
+        }
+
+        .picto__container_parrain {
+            .pain11 {
+                width: 250px;
+                position: absolute;
+                z-index: 1;
+                top: -30px;
+                left: 300px;
+                transform: rotate(-20deg);
+            }
+            .pain13 {
+                width: 250px;
+                position: absolute;
+                z-index: 2;
+                top: 300px;
+                left: 160px;
+                transform: rotate(-150deg);
+            }
+
+            .picto7__blue {
+                position: absolute;
+                z-index: 1;
+                top: 40px;
+                left: 130px;
+                transform: rotate(200deg);
+            }
+            .picto6__blue {
+                position: absolute;
+                z-index: 1;
+                top: 150px;
+                right: 130px;
+            }
+        }
+    }
+
+    .teacher, .participants {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+
+        .title {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        .highlightd__img {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 80%;
+            }
+            img {
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50%;
+            }
+        }
+        .highlights {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    }
+
+    .teacher {
+        display: none;
+        position: relative;
+        .pictos__container_teacher {
+            .pain04 {
+                position: absolute;
+                z-index: 10;
+                top: 70px;
+                left: 300px;
+            }
+            .pain15 {
+                position: absolute;
+                z-index: 10;
+                top: 30px;
+                left: 620px;
+                transform: rotate(-10deg)
+            }
+            .pain03 {
+                position: absolute;
+                z-index: 10;
+                top: 30px;
+                right: -70px;
+            }
+
+            .picto2__red {
+                position: absolute;
+                z-index: 10;
+                top: 30px;
+                left: 45%;
+            }
+        }
+    }
+
+    .participants {
+        position: relative;
+        @include respond-to(belowIpad) {
+            margin-bottom: 0;
+        }
+        .pictos__container_participants {
+            .pain01 {
+                width: 200px;
+                position: absolute;
+                z-index: 10;
+                top: 110px;
+                left: 250px;
+            }
+            .pain09 {
+                position: absolute;
+                z-index: 10;
+                top: 40px;
+                right: 200px;
+            }
+
+            .picto3__red {
+                position: absolute;
+                z-index: 99;
+                top: 50px;
+                left: 45%;
+                transform: rotate(20deg);
+            }
+            .picto11__blue {
+                position: absolute;
+                z-index: 99;
+                top: 30px;
+                right: 50px;
+                transform: rotate(20deg);
+            }
+        }
+        .highlights__items .equipe__description_content {
+            @include respond-to(belowIpad) {
+                padding: 0 20px
+            }
+        }
+    }
+
+    .wrapper__footer {
+        padding: initial;
+    }
+}

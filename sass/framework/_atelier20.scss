@@ -1,0 +1,375 @@
+.doispntozero{
+    background-image: url('../../assets/img/backgroundnewsvg.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; 
+    .sobre__img_top{
+        width: 100%;
+        margin: 80px 0;
+    }
+    
+    .gradien{
+        position: absolute;
+        @media only screen and (max-width: 767px){
+            position: relative;
+            display: block;
+            background-image: linear-gradient(0deg, #ffffff 3%, #e6e6e6 39%, rgba(0, 0, 0, 0) 100%);
+        }
+        background: linear-gradient(0deg, rgba(230,230,230,1) 3%, rgba(230,230,230,1) 39%, rgba(0,0,0,0) 100%);
+        display: flex;
+        align-items: center;
+        //background-image: linear-gradient(0deg, white, transparent);
+        bottom: 50px;
+        padding: 30px 0;
+        z-index: 1;
+        margin: 0 15px;
+        .text1{
+            >h1.blue{
+                @media only screen and (max-width: 576px){
+                    font-size: 30px;
+                }
+                margin:{
+                    top: 20px;
+                    bottom: 15px;
+                }
+            }
+            .text-2point{
+                p{
+                    font-family: $fontRegular;
+                    color: $blue;
+                }
+            }
+        }        
+        .bts{
+            @media only screen and (max-width: 767px){
+                margin-top: 30px;
+            }
+            a.button{
+                margin:{
+                    bottom: 15px;
+                }
+                &.begin{
+                    background: $red;
+                    color: $white;
+                    img{
+                        padding-right: 5px;
+                    }
+                    &:hover{
+                        background: $white;
+                        color: $red;
+                        transition: all ease .3s;
+                    }
+                }
+                &.trailer{
+                    border-color: $blue;
+                    color: $blue;
+                    transition: all ease .3s;
+                    &:hover{
+                        background: $blue;
+                        color: $white;
+                        transition: all ease .3s;
+                    }
+                }
+            }
+        }
+    }
+    
+    .mar50{
+        margin: 50px 0;
+    }
+
+    .iten__curso_2{
+        width: 100%;
+        max-width: 300px;
+        min-height: 560px;
+        background-color: $white;
+        -webkit-box-shadow: 10px 10px 13px -12px rgba(0,0,0,1);
+        -moz-box-shadow: 10px 10px 13px -12px rgba(0,0,0,1);
+        box-shadow: 10px 10px 13px -12px rgba(0,0,0,1);
+        padding-bottom: 15px;
+        margin: 0 auto;
+        border-radius: 5px;
+        @media only screen and (max-width: 767px){
+            margin-bottom: 30px;
+        }
+        .nivel_curso{
+            background-color: $blue;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            >h2{
+                text-transform: capitalize;
+                text-align: center;
+                padding:{
+                    top: 20px;
+                    bottom: 10px;
+                }
+            }
+            img{
+                padding-bottom: 30px;
+            }
+        }
+        .text{
+            text-align: center;
+            ul{
+                padding-top: 20px;
+                color: $blue;
+                min-height: 192px;
+                li{
+                    color: $blue;
+                    &:first-child{
+                        margin-bottom: 15px;
+                    }
+                    strong{
+                        color: $blue;
+                        text-align: center;
+                    }
+                    margin: 5px 0;
+                }
+            }
+
+            .h{
+                padding: 0 10px;
+                hr{
+                    border: none;
+                    background: $blue;
+                    height: 1px;
+                }
+            
+                .avaliation{
+                    color: $blue;
+                        strong{}
+                }
+            }
+
+            span{
+                display: block;
+                padding: 0 10px;
+                padding-bottom: 30px;
+                color: $blue;
+                font-size: 14px;
+                min-height: 78px;
+            }
+
+            a.button{
+                &.red{
+                    background: $red;
+                    color: $white;
+                    width: 80%;
+                    margin: 20px auto;
+                    img{
+                        padding-right: 5px;
+                    }
+                    &:hover{
+                        background: $white;
+                        color: $red;
+                        transition: all ease .3s;
+                    }
+                }
+            }
+        }
+    }
+        
+        
+
+    .w_one{
+        font-family: $fontRegular;
+        border-radius: 5px;
+        margin: 25px 0;
+        padding: 20px 0;
+        background-color: $white;
+        p{
+            text-align: center;
+            color: $blue;
+        }
+    }
+
+    .w_two{
+        padding: 20px 0;
+        background-color: $white;
+        margin: 0;
+        margin-bottom: 50px;
+        border-radius: 5px;
+        p{
+            strong{}
+        }
+        .bts{
+            a.button{
+                &.trailer{
+                    border-color: $blue;
+                    color: $blue;
+                    transition: all ease .3s;
+                    &:hover{
+                        background: $blue;
+                        color: $white;
+                        transition: all ease .3s;
+                    }
+                }
+            }
+        }
+    }
+    
+    .image_static{
+        position: relative;
+        margin-bottom: 50px;
+        img{
+            width: 100%;
+        }
+        .text{
+            bottom: 20px;
+            position: absolute;
+            width: 100%;
+            padding-left: 30px;
+            >h1{
+                color: $white;
+                @media only screen and (max-width: 576px){
+                    font-size: 30px;
+                }
+            }
+            p{
+                color: $white;
+                @media only screen and (max-width: 576px){
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .iten_white{
+        background-color: $white;
+        border-radius: 5px;
+        min-height: 325px;
+        @media only screen and (max-width: 767px){
+            margin-bottom: 30px;
+        }
+        .figure{
+            background-color: rgba(0,0,255,0.06);
+            text-align: center;
+            img{
+                padding: 30px 0;
+                padding-bottom: 15px;
+                min-height: 130px;
+                object-fit: contain;
+                width: 120px;
+            }
+            >h2{
+                font-size: 25px;
+                line-height: 35px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+        }
+        .content{
+            padding: 20px 15px;
+            p{
+                font-family: $fontRegular;
+                color: $blue;
+                text-align: left;
+            }
+        }
+    }
+
+
+    .gallery{
+        margin: 50px 0;
+        img{
+            width: 100%;
+            object-fit: cover;
+            margin: 15px 0;
+        }
+    }
+
+    .faq{
+        border-bottom: solid 1px $blue;
+        strong{
+            font-size: 30px;
+            line-height: 35px;
+            padding: 5px 10px;
+            padding-bottom: 2px;
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    
+    #accordion{
+        margin-bottom: 50px;
+        #accordion-courses{
+			li{
+				.close{}
+				>h2.product_section{
+                    font-family: $fontBold;
+                    color: $blue;
+                    font-size: 40px;
+                    @media only screen and (max-width: 767px){
+                        font-size: 28px;
+                    }
+                    line-height: 35px;
+                    padding: 15px 0;
+                    text-transform: initial;
+                    border-bottom: solid 1px $blue;
+                    &:before{
+                        position: absolute;
+                        content: '';
+                        height: 4px;
+                        width: 15px;
+                        background-color: $blue;
+                        right: 20px;
+                        top: 40%;
+                        transform: rotate(45deg);
+                    }
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        height: 4px;
+                        width: 15px;
+                        background-color: $blue;
+                        right: 20px;
+                        top: 52%;
+                        transform: rotate(-45deg);
+                        transition: transform .3s ease;
+                    }
+                    &.less{
+                        border-bottom: none;
+                        &:after{
+                            position: absolute;
+                            content: '';
+                            height: 4px;
+                            width: 15px;
+                            background-color: $blue;
+                            right: 21px;
+                            top: 52%;
+                            transform: rotate(45deg);
+                            transition: transform .3s ease;
+                        }
+                        &:before{
+                            position: absolute;
+                            content: '';
+                            height: 4px;
+                            width: 15px;
+                            background-color: $blue;
+                            right: 12px;
+                            top: 52%;
+                            transform: rotate(-45deg);
+                            transition: transform .3s ease;
+                        }
+                    }
+                }
+                .bloc{
+                    padding: 10px 0;
+                    border-bottom: solid 1px $blue;
+                    p{
+                        color: $blue;
+                        font-family: $fontRegular;
+                        width: 80%;
+                        @media only screen and (min-width: 1024px){
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

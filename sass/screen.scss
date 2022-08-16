@@ -1,0 +1,50 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+@import "vendors/normalize";
+@import "vendors/helpers";
+
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+@import "base/queries";
+@import "base/mixins";
+@import "base/variables";
+@import "base/grid";
+@import "base/keyframes";
+
+/* MODULES - Re-usable site elements.
+========================================================================== */
+@import "modules/menu";
+@import "modules/footer";
+@import "modules/burger";
+@import "modules/flipCard";
+@import "modules/button";
+@import "modules/form";
+@import "modules/highlights";
+@import "modules/popup";
+@import "modules/calendar";
+
+
+/* FRAMEWORK - Structure and layout files.
+========================================================================== */
+@import "framework/layout";
+@import "framework/home";
+@import "framework/cursos";
+@import "framework/cursos_2";
+@import "framework/contato";
+@import "framework/sobre";
+@import "framework/equipe";
+@import "framework/equipe-responsive";
+@import "framework/single";
+@import "framework/comprar";
+@import "framework/doispontozero";
+@import "shame";
+@import "framework/atelier20";
+

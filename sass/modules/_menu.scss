@@ -1,0 +1,346 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 100%;
+	height: 80px;
+
+
+	background-color: $white;
+	box-shadow: 0 -3px 40px 2px rgba(0,0,0,0.3);
+
+	z-index: 600;
+
+	@include respond-to(belowIpad) {
+		padding: 0 40px 0 20px;
+	}
+	.menu__wrapper {
+		max-width: 1200px;
+		padding: 0 60px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include respond-to(belowIpad) {
+			padding: 0 0 0 10px;
+			width: 100%;
+			max-width: none;
+		}
+
+	}
+	.menu__logo {
+		position: relative;
+		width: 120px;
+		height: 80px;
+		@include respond-to(belowDesktop) {
+			width: 60%;
+		}
+		a {
+			height: 120px;
+			width: 120px;
+			display: block;
+			position: absolute;
+			right: 0;
+			@include respond-to(belowIpad) {
+				right: -20px;
+			}
+		}
+		img {
+			width: 120px;
+			position: absolute;
+			top: 10px;
+		}
+		.hidden {
+			display: none;
+		}
+	}
+	.menu__lang {
+		height: 16px;
+		&.opened ul {
+			height: 36px;
+			transition: height 0.3s ease-out;
+		}
+		ul {
+			height: 16px;
+			overflow: hidden;
+			padding: 0 20px 10px 20px;
+			margin: 0;
+			transition: height 0.3s ease-out;
+			background-color: $white;
+			li {
+				height: 20px;
+				&.active {
+					font-family: 'BrandonBold', Arial, serif;
+				}
+			}
+		}
+
+		//width: 100px;
+		//height: 80px;
+	}
+
+	img.menu__lang_show {
+		float: left;
+		margin-top: 3px;
+		cursor: pointer;
+		transform: rotate(-90deg);
+		transition: transform 0.3s ease-out;
+		&.opened {
+			transform: rotate(0deg);
+			transition: transform 0.3s ease-out;
+		}
+	}
+
+	.menu__item {
+		font-family: $fontMedium;
+		font-size: 13px;
+		line-height: 19px;
+		a {
+			color: $font;
+			text-decoration: none;
+			&:hover {
+				font-family: $fontBold;
+				color: $red;
+			}
+		}
+		&.active a {
+			font-family: $fontBold;
+			color: $red;
+		}
+
+	}
+	//.menu__cat {
+	//	height: 16px;
+	//	max-width: 100px;
+	//	ul {
+	//		height: 16px;
+	//		width: 100%;
+	//		overflow: hidden;
+	//
+	//		padding: 0 10px;
+	//		margin: 0;
+	//		transition: height .3s ease-out;
+	//		background-color: #fff;
+	//		li {
+	//			height: auto;
+	//			line-height: 16px;
+	//			margin-bottom: 5px;
+	//			a {
+	//				line-height: 25px;
+	//				&:hover {
+	//					font-family: 'BrandonBold', Arial, serif;
+	//					color: $blue;
+	//				}
+	//			}
+	//		}
+	//		li:first-child {
+	//			line-height: 16px;
+	//			height: 25px;
+	//			a {
+	//				line-height: 16px;
+	//				border-bottom: 1px solid $grey;
+	//			}
+	//		}
+	//		li a {
+	//			font-size: 13px;
+	//			line-height: 16px;
+	//			font-family: 'BrandonMedium', serif;
+	//		}
+	//	}
+	//
+	//}
+
+	.menu__item_newsletter {
+		width: 80px;
+	}
+
+	.menu__social{
+		svg {
+			width: auto;
+			height: 20px;
+		}
+		&.menu__social_facebook {
+			svg path {
+				fill: $blue;
+			}
+			@include respond-to(aboveIpad) {
+				&:hover svg path {
+					fill: $blueHover;
+				}
+			}
+		}
+		&.menu__social_instagram {
+			svg path {
+				fill: $red;
+			}
+			@include respond-to(aboveIpad) {
+				&:hover svg path {
+					fill: $redHover;
+				}
+			}
+		}
+
+	}
+}
+
+.menu__mobile {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 998;
+	transition: left 0.3s ease-out 0.3s, background-color 0.3s ease-out;
+	&.opened {
+		left: 0;
+		background-color: rgba(0,0,0,0.5);
+		transition: left 0.3s ease-out, background-color 0.3s ease-out 0.3s;
+	}
+	.menu__mobile_wrapper {
+		width: 250px;
+		height: 100%;
+		background-color: $white;
+		padding: 130px 40px;
+		overflow-y: scroll;
+		@include respond-to(belowIpad) {
+			box-shadow: none;
+		}
+		&::-webkit-scrollbar {
+			width: 0;  /* remove scrollbar space */
+			background: transparent;  /* optional: just make scrollbar invisible */
+		}
+
+		a {
+			text-decoration: none;
+		}
+		.menu__burger {
+			position: absolute;
+			top: 30px;
+			left: 40px;
+		}
+		h3 {
+			height: 70px;
+			color: $red;
+			border-bottom: 3px solid $font;
+			margin-bottom: 35px;
+
+			font-family: $fontBlack;
+			font-size: 24px;
+			line-height: 26px;
+			&::first-line {
+				color: $blue;
+			}
+		}
+
+		.ipadMenu {
+			font-family: $fontMedium;
+			font-size: 18px;
+			line-height: 20px;
+
+			margin-bottom: 15px;
+			a {
+				color: $font;
+				text-decoration: none;
+				&:hover {
+					font-family: $fontBold;
+					color: $red;
+				}
+			}
+			&.active a {
+				font-family: $fontBold;
+				color: $red;
+			}
+		}
+
+		@include respond-to(belowIpad) {
+			width: 100%;
+			padding: 40px;
+			.ipadMenu a {
+				color: $red;
+			}
+
+		}
+		.menu__mobile_logolink {
+			position: relative;
+			width: 100%;
+			display: block;
+			height: 160px;
+			@include respond-to(aboveIpadInc) {
+				display: none;
+			}
+		}
+		.menu__mobile_logo {
+			position: absolute;
+			left: 50%;
+			top: 20px;
+			width: 120px;
+			height: 120px;
+			transform: translateX(-50%);
+		}
+
+		.menu__lang {
+			position: relative;
+			height: auto;
+			border-bottom: 1px solid $grey;
+			border-top: 1px solid $grey;
+			margin: 40px 0;
+			padding: 0 !important;
+			transition: all 0.3s ease-out;
+
+			@include respond-to(belowIpad) {
+				border-bottom: none;
+				border-top: 3px solid $blue;
+			}
+			img {
+				cursor: pointer;
+				position: absolute;
+				top: 25px;
+				left: 0;
+				transform: rotate(-90deg);
+			}
+			ul {
+				margin: 20px 0;
+				height: 20px;
+				overflow: hidden;
+				transition: all 0.3s ease-out;
+			}
+		}
+		.menu__mobile_social {
+			display: flex;
+			justify-content: space-around;
+			padding: 40px 40px 0 40px;
+			a {
+				width: 25px;
+				height: 25px;
+				@include respond-to(aboveIpad) {
+					margin: 0 15px;
+				}
+				img {
+					width: 30px;
+				}
+				svg {
+					width: 25px;
+					height: 25px;
+
+				}
+				&.red {
+					svg path {
+						fill: $red;
+					}
+				}
+				&.blue {
+					svg path {
+						fill: $blue;
+					}
+				}
+			}
+
+		}
+	}
+}

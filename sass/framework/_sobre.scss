@@ -1,0 +1,288 @@
+@import "../base/variables";
+@import "../base/keyframes";
+
+.sobre {
+  padding: 80px 40px 40px 40px;
+  margin-bottom: 40px;
+  position: relative;
+
+  @include respond-to(belowIpad) {
+    width: 100%;
+    padding: 40px 10px;
+  }
+
+  .sobre__header {
+    width: auto;
+    margin-bottom: 20px;
+
+    @include respond-to(belowIpad) {
+      margin: 0 20px 20px 20px;
+    }
+  }
+
+  .sobre__image {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 10px;
+    position: relative;
+
+    @include respond-to(belowIpad) {
+      &.img1 {
+        height: auto;
+      }
+      &.img2 {
+        height: 380px;
+      }
+    }
+
+    .sobre__img_top {
+      width: 100%;
+      height: 580px;
+      position: absolute;
+      object-fit: cover;
+      @include respond-to(belowIpad) {
+        height: auto;
+        object-fit: cover;
+        position: initial;
+        height: auto;
+      }
+    }
+
+    .sobre__img_bottom {
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 50px;
+      @include respond-to(belowIpad) {
+        height: 300px;
+        object-fit: cover; //gqrde les dimmension de lq photo
+      }
+    }
+
+    .sobre__box1 {
+      //style de la div
+      width: 250px;
+      height: auto;
+      border-radius: 3px;
+      background: rgba(14, 69, 222, 0.9);
+
+      //position
+      position: absolute;
+      z-index: 1;
+      top: 130px;
+      opacity: 0;
+      right: -12%;
+      padding: 20px;
+
+      &.animate {
+        animation-name: comesToRightSlow;
+        animation-delay: 2s;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+      @include respond-to(belowIpad) {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        position: initial;
+        top: 0;
+        right: 0;
+        transform: translateY(-60px);
+      }
+    }
+
+    .sobre__box2 {
+      width: 300px;
+      height: 140px;
+      border-radius: 3px;
+      background-color: $red;
+
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .button {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+      @include respond-to(belowIpad) {
+        width: 90%;
+        height: auto;
+        padding: 30px 0 40px 0;
+      }
+    }
+  }
+
+  .sobre__title {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+
+    @include respond-to(belowIpadInc) {
+      margin: 0 20px 20px 20px;
+      height: auto;
+      width: auto;
+    }
+
+    .sobre__title_left {
+      width: 33.3%;
+      float: left;
+
+      @include respond-to(belowIpad) {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+      }
+    }
+
+    .sobre__text_right {
+      width: 66.6%;
+      float: left;
+
+      @include respond-to(belowIpad) {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+      }
+      .bold {
+        margin-bottom:  20px;
+      }
+    }
+  }
+
+  .sobre__highlights {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to(belowIpad) {
+      width: auto;
+      height: auto;
+      margin: 0 20px 20px;
+    }
+
+    .sobre__highlights_items {
+      width: 25%;
+      float: left;
+      padding: 0 20px 0 0;
+      text-align: left;
+      align-content: center;
+      align-self: stretch;
+
+      &:nth-child(2) {
+        border-left: 1px solid $blue;
+        border-right: 1px solid $blue;
+        padding: 0 20px;
+        @include respond-to(belowIpad) {
+          border-left: 0;
+          border-right: 0;
+          border-top: 1px solid $blue;
+          border-bottom: 1px solid $blue;
+          padding: 20px 0;
+        }
+      }
+      &:nth-child(3) {
+
+        border-right: 1px solid $blue;
+        padding: 0 20px;
+        @include respond-to(belowIpad) {
+          border-left: 0;
+          border-right: 0;
+          border-bottom: 1px solid $blue;
+          padding: 20px 0;
+        }
+      }
+      &:nth-child(4) {
+        padding: 0 0 0 20px;
+      }
+
+      @include respond-to(belowIpad) {
+        width: 100%;
+        padding: 20px 0;
+
+      }
+    }
+
+    .sobre__icons {
+      margin: 20px auto 30px auto;
+      display: block;
+    }
+
+    @include respond-to(belowIpad) {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  .sobre__map {
+    width: 100%;
+    height: 280px;
+
+    #map {
+      height: 300px;
+      width: 100%
+    }
+    @include respond-to(belowIpad) {
+      height: 260px;
+    }
+  }
+  .sobre__pictos_container {
+    .pain04{
+      z-index: -1;
+      position: absolute;
+      top:-20px;
+      right:50%;
+    }
+    .pain10{
+      width:500px;
+      position: absolute;
+      z-index: -1;
+      top:300px;
+      right:-200px;
+      transform:rotate(60deg);
+    }
+
+    .picto4_red{
+      position: absolute;
+      z-index: -1;
+      top:150px;
+      right:55%;
+      transform:rotate(90deg);
+      @include respond-to(belowIpad) {
+        display: none;
+      }
+    }
+    .picto5_blue{
+      position: absolute;
+      z-index: -1;
+      top:190px;
+      right:410px;
+      transform:rotate(10deg);
+      @include respond-to(belowIpad) {
+        display: none;
+      }
+    }
+    .picto9_red{
+      position: absolute;
+      z-index: -1;
+      top:30px;
+      right:70px;
+      transform:rotate(-20deg);
+    }
+  }
+}

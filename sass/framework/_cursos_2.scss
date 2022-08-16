@@ -1,0 +1,142 @@
+.sobre {
+
+  .cursos__alacarte {
+	position: relative;
+	height: 320px;
+	margin-bottom: 40px;
+	padding-left: 40px;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.title_container {
+	  margin-right: 20px;
+	  h3 {
+		font-size: 50px;
+		line-height: 60px;
+	  }
+
+	  &.animate {
+		//Prototype : @mixin slideAnim($name, $delay, $duration, $posStart, $posEnd, $opaStart, $opaEnd)
+		@include slideAnim('leave_title', 0, 1s, 0px, -1000px, 1, 0);
+	  }
+	}
+	.cursos__alacarte_button {
+	  margin-left: 20px;
+	  .alacarte__button {
+	  }
+	  &.animate {
+		@include slideAnim('leave_title', 0, 1s, 0px, -1000px, 1, 0);
+	  }
+	}
+
+	.curso__pictos_container {
+	  background-color: $green;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: -1;
+
+	  .picto1__blue {
+		position: absolute;
+		top: 40px;
+		right: 60px;
+		transform: rotate(60deg);
+
+		&.animate {
+		  @include slideAnim('leave_picto', .12s, 1s, 0px, -1500px, 1, 0);
+		}
+	  }
+	  .picto2__blue {
+		position: absolute;
+		bottom: 40px;
+		left: 150px;
+
+		&.animate {
+		  @include slideAnim('leave_picto', .1s, 1s, 0px, -1000px, 1, 0);
+		}
+	  }
+	  .picto4__blue {
+		position: absolute;
+		top: 50px;
+		right: 400px;
+
+		&.animate {
+		  @include slideAnim('leave_picto', .05s, 1s, 0px, -1000px, 1, 0);
+		}
+	  }
+	  .picto6__blue {
+		position: absolute;
+		bottom: 50px;
+		right: 200px;
+
+		&.animate {
+		  @include slideAnim('leave_picto', 0, 1s, 0px, -1000px, 1, 0);
+		}
+	  }
+	  .picto15__blue {
+		position: absolute;
+		top: 50px;
+		left: 50px;
+
+		&.animate {
+		  @include slideAnim('leave_picto', .13s, 1s, 0px, -1000px, 1, 0);
+		}
+	  }
+	}
+
+	.content__container {
+	  background-color: $green;
+	  width: 100%;
+	  height: auto;
+	  padding: 40px 100px 20px 100px;
+
+	  display: none;
+	  opacity: 0;
+
+	  position: absolute;
+	  top: -20px;
+	  left: 0;
+
+	  &.animate {
+		@include slideAnim('come_panel', 0, 1s, 1000px, 0px, 0, 1);
+	  }
+
+	  .content__container_title {
+	  }
+
+	  .content__container_content {
+		display: flex;
+		margin-bottom: 20px;
+
+		.content_left {
+		  width: 100%;
+		  height: auto;
+		  margin-right: 20px;
+		  flex: 1;
+		}
+		.content_right {
+		  width: 100%;
+		  height: 1;
+		  margin-left: 20px;
+		  padding-right: 60px;
+		  flex: 1;
+		}
+	  }
+
+	  .content__container_button {
+		width: 70%;
+		margin: auto;
+		margin: 40px auto 0 auto;
+
+		&.button {
+		  border: 0;
+		}
+	  }
+	}
+  }
+}

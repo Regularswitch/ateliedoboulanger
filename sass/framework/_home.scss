@@ -1,0 +1,673 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.home {
+  overflow-x: hidden;
+  .home__header {
+	width: 100%;
+	height: 850px;
+	@include respond-to(belowIpad) {
+	  height: auto;
+	}
+
+	.home__header_tram {
+	  position: relative;
+	  height: 730px;
+	  width: 100%;
+	  .home__header_tram--logo {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		mix-blend-mode: multiply;
+		z-index: $zLogo;
+
+		width: 250px;
+		height: 250px;
+		@include respond-to(belowIpad) {
+		  width: 200px;
+		  height: 200px;
+		  top: 25vh;
+		}
+	  }
+	  .home__header_tram--pain12 {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		height: 310px;
+		transform: translateX(-60px);
+		@include respond-to(belowIpad) {
+		  transform: translate(-180px, 30px) rotate(-40deg);
+		}
+	  }
+	  .home__header_tram--pain03 {
+		position: absolute;
+		top: 480px;
+		left: 180px;
+		height: 130px;
+
+		@include respond-to(belowIpad) {
+		  left: 230px;
+		  height: 130px;
+		  transform: translate(0, 90px);
+		}
+	  }
+	  .home__header_tram--pain01 {
+		position: absolute;
+		top: 800px;
+		left: 60%;
+		height: 100px;
+		@include respond-to(belowIpad) {
+		  height: 70px;
+		  transform: translate(-20px, -170px);
+		}
+	  }
+	  .home__header_tram--pain06 {
+		position: absolute;
+		top: 300px;
+		right: -200px;
+		height: 250px;
+		@include respond-to(belowIpad) {
+		  display: none;
+		}
+	  }
+
+	  .home__header_tram--pain10 {
+		position: absolute;
+		top: 530px;
+		left: -210px;
+		width: 500px;
+		transform: rotate(-60deg);
+		@include respond-to(belowIpad) {
+		  left: -180px;
+		  width: 400px;
+		}
+	  }
+	  .home__header_tram--pain11 {
+		position: absolute;
+		top: 50px;
+		right: -150px;
+		width: 350px;
+		@include respond-to(belowIpad) {
+		  display: none;
+		}
+
+	  }
+	  .home__header_tram--pain16 {
+		position: absolute;
+		top: 40px;
+		left: 25%;
+		width: 350px;
+		transform: rotate(-12deg);
+		@include respond-to(belowIpad) {
+		  left: initial;
+		  right: -80px;
+		  width: 200px;
+		}
+	  }
+
+	  .home__header_tram--picto2-blue {
+		position: absolute;
+		top: 100px;
+		left: 40px;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+
+		}
+	  }
+	  .home__header_tram--picto3-red {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  display: none;
+		}
+	  }
+	  .home__header_tram--picto5-blue {
+		position: absolute;
+		top: 610px;
+		left: 40%;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  display: none;
+		}
+	  }
+	  .home__header_tram--picto4-bleu {
+		position: absolute;
+		top: 460px;
+		right: 25%;
+		transform: rotate(90deg);
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  right: initial;
+		  left: 5%;
+		  transform: translate(0, -170px) rotate(90deg)
+		}
+	  }
+	  .home__header_tram--picto14-red {
+		position: absolute;
+		top: 560px;
+		right: 150px;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  transform: translate(-20px, -40px);
+		}
+	  }
+	  .home__header_tram--picto13-red {
+		position: absolute;
+		top: 380px;
+		left: 120px;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  //transform: translate(-20px, -10px);
+		  display: none;
+		}
+	  }
+	  .home__header_tram--picto1-red {
+		position: absolute;
+		top: 180px;
+		right: 230px;
+		width: 60px;
+
+		@include respond-to(belowIpad) {
+		  //transform: translate(-20px, -40px);
+		  display: none;
+		}
+	  }
+	}
+	.home__header_content {
+	  display: flex;
+	  justify-content: space-between;
+
+	  width: 100%;
+	  height: 130px;
+	  padding: 0 $padding;
+	  transform: translateY(-80px);
+
+	  @include respond-to(belowIpad) {
+		display: block;
+		height: auto;
+		padding: 0;
+		transform: translateY(-40px);
+	  }
+	  .home__header_box1, .home__header_box2 {
+		@include rounded-corner(3px);
+	  }
+	  .home__header_box1 {
+		width: 300px;
+		height: 200px;
+		float: left;
+
+		transform: translateY(-110px);
+		margin-right: 10px;
+		background-color: $blue;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		@include respond-to(belowDesktopM) {
+		  width: auto;
+		  padding: 20px;
+		  h3 {
+			font-size: 28px;
+			line-height: 30px;
+		  }
+		}
+		@include respond-to(belowIpad) {
+		  float: none;
+		  width: calc(100% - 80px);
+		  margin: 0 40px;
+		  transform: translateY(-50px);
+		}
+		@include respond-to(belowIpadInc) {
+		  padding: 0px 20px 30px 20px;
+		  height: 160px;
+		}
+		.button {
+		  position: absolute;
+		  bottom: -20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  width: 80%;
+
+		  @include respond-to(belowDesktopM) {
+			text-align: center;
+			height: 60px;
+			line-height: 22px;
+		  }
+		}
+	  }
+	  .home__header_box2 {
+		position: relative;
+		width: 630px;
+		height: 200px;
+		float: left;
+
+		margin-left: 10px;
+		padding: 20px 40px;
+
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration: none !important;
+		@include respond-to(belowDesktopM) {
+		  padding: 30px 20px;
+		  width: auto;
+		}
+		@include respond-to(belowIpad) {
+		  float: none;
+		  width: calc(100% - 20px);
+		  margin: 0 10px;
+		  display: block;
+		}
+		.box2__bg {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: $red;
+		  @include rounded-corner(3px);
+		  z-index: -1;
+		  transition: left .3s ease-out;
+
+		}
+		.text--number {
+		  height: auto;
+		  @include respond-to(belowDesktopM) {
+			font-size: 150px;
+		  }
+		  @include respond-to(belowIpad) {
+			font-size: 200px;
+			line-height: 150px;
+			float: left;
+		  }
+		}
+		.filetV {
+		  @include respond-to(belowIpad) {
+			display: none;
+		  }
+		}
+		img {
+		  margin-top: 40px;
+		}
+		h3 {
+		  &:nth-of-type(1) {
+			width: 150px;
+			@include respond-to(belowDesktopM) {
+			  width: 120px;
+			  margin-left: 10px;
+			  font-size: 28px;
+			  line-height: 30px;
+			}
+			@include respond-to(belowIpad) {
+			  float: left;
+			  margin-top: 30px;
+			  width: 150px;
+			  font-size: 35px;
+			  line-height: 35px;
+			}
+		  }
+		  &:nth-of-type(2) {
+			width: 200px;
+			@include respond-to(belowDesktopM) {
+			  width: 180px;
+			  font-size: 28px;
+			  line-height: 30px;
+			}
+			@include respond-to(belowIpadInc) {
+			  padding-left: 10px;
+			}
+			@include respond-to(belowIpad) {
+			  float: left;
+			  line-height: 20px;
+			  width: 150px;
+			  font-size: 14px;
+			  line-height: 20px;
+			}
+		  }
+		  &:hover {
+			font-family: $fontBold;
+		  }
+		}
+	  }
+	}
+  }
+
+  .home__savoir {
+	width: 100%;
+	padding: 40px $padding 0 $padding;
+
+	@include respond-to(belowIpad) {
+	  padding: 40px 20px 0 20px;
+	}
+	h1 {
+	  width: 330px;
+	  height: auto;
+	}
+	.home__savoir_content {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: flex-end;
+	  height: 460px;
+	  //height: 250px;
+	  padding: 0 20px $padding 20px;
+	  border-bottom: 4px solid $blue;
+	  @include respond-to(belowDesktop) {
+		padding: 0 0 40px 0;
+	  }
+	  @include respond-to(belowIpad) {
+		display: block;
+		height: auto;
+		h1 span {
+		  display: none;
+		}
+	  }
+	  .team__item {
+		position: relative;
+		width: 30%;
+		text-align: center;
+		@include respond-to(belowIpad) {
+		  width: 100%;
+		}
+		.team__item_img {
+		  width: 220px;
+		  height: 220px;
+		  margin: auto auto 30px auto;
+
+		  @include rounded-corner(110px);
+		  overflow: hidden;
+
+		  background-color: $white;
+		  @include transition(all, 0.3s, ease-out, 0s);
+		  //transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.3s ease-out, border-radius  0.3s ease-out;
+		  img {
+			width: 100%;
+		  }
+		}
+		h5 {
+		  width: 90%;
+		  height: 50px;
+		  margin: 20px auto;
+		}
+		h3 {
+		  width: 90%;
+		  margin: 30px auto;
+		}
+		.text {
+		  width: 90%;
+		  height: 45px;
+		  //height: auto;
+		  margin: auto;
+		}
+		.team__item_macaron {
+		  position: absolute;
+		  top: 30px;
+		  right: 0;
+
+		  width: 95px;
+		  opacity: 0;
+		  @include transition(opacity, 0.3s, ease-out, 0s);
+		}
+		&.team__item_parrain {
+		  .team__item_img {
+			width: 270px;
+			height: 270px;
+			@include rounded-corner(140px);
+		  }
+		  .team__item_macaron {
+			opacity: 1;
+		  }
+		}
+		&:hover {
+		  .team__item_img {
+			background-color: $blue;
+		  }
+		}
+	  }
+	}
+  }
+
+  .home__curso {
+	width: 100%;
+	padding: $padding;
+	@include respond-to(belowIpad) {
+	  padding: 40px 20px;
+	}
+	.home__curso_logos {
+	  width: 70px;
+	  height: 160px;
+	  float: left;
+	  margin-right: 40px;
+	  @include respond-to(belowIpad) {
+		margin-right: 20px;
+	  }
+	  img {
+		width: 70px;
+		height: 70px;
+		&:first-of-type {
+		  margin-bottom: 25px;
+		  @include respond-to(belowDesktopM) {
+			margin-bottom: 0;
+		  }
+		}
+	  }
+	}
+	h1 {
+	  height: 160px;
+	  width: 500px;
+	  float: left;
+	  margin-right: 20px;
+	  @include respond-to(belowDesktopM) {
+		width: calc(100% - 110px);
+		height: auto;
+		margin-right: 0;
+	  }
+	}
+	.home__curos_desc {
+	  position: relative;
+	  height: 160px;
+	  width: calc(100% - 630px);
+	  float: left;
+	  @include respond-to(belowDesktopM) {
+		width: 100%;
+		height: auto;
+	  }
+	  .button {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 120px;
+		@include respond-to(belowDesktopM) {
+		  position: initial;
+		  margin-top: 20px;
+		}
+	  }
+	}
+	.home__curso_facebook {
+	  width: 100%;
+	  height: 380px;
+	  padding: $padding 0;
+	  border-bottom: 1px solid $blue;
+	  @include respond-to(belowIpad) {
+		padding: 0;
+		height: auto;
+	  }
+	}
+	.home__curso_facebook--1, .home__curso_facebook--2 {
+	  position: relative;
+	  display: block;
+	  float: left;
+	  height: 300px;
+	  width: 50%;
+	  @include respond-to(belowIpad) {
+		width: 100%;
+		float: none;
+		margin: 20px 0 40px 0;
+	  }
+	  img:first-of-type {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50%;
+		//@include transition(box-shadow, 0.23s, ease-out, 0s);
+	  }
+	  .foreground {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100% - 10px);
+		height: 100%;
+		z-index: $zLogo;
+
+		opacity: 0;
+		@include transition(opacity, 0.3s, ease-out, 0s);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: rgba(14, 69, 222, .5);
+		img {
+		  width: 130px;
+		  height: 130px;
+
+		}
+	  }
+	  &:hover {
+		//@include box-shadow(5px, 5px, 10px, -3px, rgba(0,0,0,0.5));
+		.foreground {
+		  opacity: 1;
+		}
+	  }
+	}
+	.home__curso_facebook--1 {
+	  padding-right: 10px;
+	  @include respond-to(belowIpad) {
+		padding: 0;
+	  }
+	}
+	.home__curso_facebook--2 {
+	  padding-left: 10px;
+	  @include respond-to(belowIpad) {
+		padding: 0;
+	  }
+	  .foreground {
+		margin-left: 10px;
+	  }
+	}
+  }
+
+  .home__tradition {
+	padding: 0 $padding $padding $padding;
+	display: flex;
+
+	@include respond-to(belowIpad) {
+	  display: block;
+	  padding: 0 20px 20px;
+	}
+	.home__tradition_left {
+	  width: calc(100% - 300px);
+	  padding-right: 20px;
+
+	  @include respond-to(belowIpad) {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 20px;
+	  }
+	  h1 {
+		width: 350px;
+		float: left;
+		@include respond-to(belowDesktopM) {
+		  float: none;
+		  width: 100%;
+		  margin-bottom: 20px;
+		}
+	  }
+	  .text {
+		width: calc(100% - 350px);
+		padding-left: 20px;
+		float: left;
+		@include respond-to(belowDesktopM) {
+		  float: none;
+		  width: 100%;
+		  padding-left: 0;
+		}
+	  }
+	  .home__tradition_left--img {
+		position: relative;
+		width: 100%;
+		height: 430px;
+		margin-top: 20px;
+		img {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		  object-position: 50%;
+		}
+		.button {
+		  position: absolute;
+		  bottom: 30px;
+		  right: 20px;
+		  width: 130px;
+		}
+	  }
+	}
+	.home__tradition_right {
+	  position: relative;
+	  width: 300px;
+
+	  padding: $padding;
+	  @include rounded-corner(3px);
+	  background-color: $blue;
+	  color: $white;
+
+	  @include respond-to(belowIpad) {
+		width: 100%;
+		height: auto;
+	  }
+	  h3 {
+		height: 60px;
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 30px;
+	  }
+	  .sabia_content {
+		display: none;
+		height: 355px;
+		overflow-y: hidden;
+		//opacity: 0;
+		//transition: opacity 0.3s ease-out;
+		//@include transition(opacity, 0.3s, ease-out, 0.3s);
+		&.show {
+
+		  //opacity: 1;
+		}
+	  }
+	  img {
+		width: 30px;
+		position: absolute;
+		bottom: 40px;
+		left: 130px;
+		cursor: pointer;
+		@include respond-to(belowIpad) {
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+	  }
+	}
+  }
+
+}

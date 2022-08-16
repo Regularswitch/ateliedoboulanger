@@ -1,0 +1,124 @@
+function throttle(fn, delay) {
+    var allowSample = true;
+
+    return function(e) {
+        if (allowSample) {
+            allowSample = false;
+            setTimeout(function() { allowSample = true; }, delay);
+            fn(e);
+        }
+    };
+}
+var firstTouchY, shareWrapH;
+
+function scrollY() { return window.pageYOffset || docElem.scrollTop; }
+function touchStart(ev) {
+    console.log('test', ev);
+
+// if( triggerOn === 'deviceorientation' ) {
+//     window.addEventListener('deviceorientation', handleOrientation);
+// }
+//
+    var touchobj = ev.changedTouches[0];
+//
+// // save the initial position of the touch (y-axis)
+    firstTouchY = parseInt(touchobj.clientY);
+// initialScroll = scrollY();
+// // get the current height of the share wrapper
+// shareWrapH = shareWrap.offsetHeight;
+//
+// // make sure the element doesnt have the transition class (added when the user releases the touch)
+// classie.remove(contentEl, 'container--reset');
+}
+function touchMove(ev) {
+    console.log('touchMove', ev);
+    var moving = function() {
+        var touchobj = ev.changedTouches[0], // reference first touch point for this event
+            touchY = parseInt(touchobj.clientY),
+            touchYDelta = touchY - firstTouchY;
+
+
+        console.log(touchYDelta);
+
+        if(touchYDelta >= 0 && touchYDelta < 600) {
+            contentEl.css('transform', 'translateY('+touchYDelta + 'px');
+        }
+
+
+// if ( scrollY() === 0 && touchYDelta > 0  ) {
+//     ev.preventDefault();
+// }
+//
+// if ( initialScroll > 0 || scrollY() > 0 || scrollY() === 0 && touchYDelta < 0 ) {
+//     firstTouchY = touchY;
+//     return;
+// }
+//
+// // change the selected share item when moving to the left/right.
+// if( triggerOn === 'touchmove' ) {
+//     selectShareItem(ev);
+// }
+//
+// calculate the distance the container needs to be translated
+// translateVal = -shareWrapH + touchYDelta/friction;
+//
+// set the transform value for the container
+// setContentTransform();
+//
+// // show the selected sharing item if touchYDelta > triggerDistance
+// if( touchYDelta > triggerDistance ) {
+//     classie.add(contentEl, 'container--active');
+// }
+// else {
+//     classie.remove(contentEl, 'container--active');
+// }
+    };
+
+    throttle(moving(), 20);
+}
+
+function touchEnd(ev) {
+    console.log('touchEnd', ev);
+    var touchobj = ev.changedTouches[0], // reference first touch point for this event
+        touchY = parseInt(touchobj.clientY),
+        touchYDelta = touchY - firstTouchY;
+
+
+// if(touchYDelta < 600) {
+    contentEl.css('transform', 'translateY(0px)');
+// contentEl.css('transition', 'inherit');
+// }
+// if( triggerOn === 'deviceorientation' ) {
+//     window.removeEventListener('deviceorientation', handleOrientation);
+// }
+//
+// if( classie.has(contentEl, 'container--active') ) {
+//     // expanding effect on selected item
+//     classie.add(contentEl, 'container--share');
+//
+//     onEndTransition(shareEl, function() {
+//         classie.remove(contentEl, 'container--share');
+//         classie.remove(contentEl, 'container--active');
+//         // after expanding trigger the share functionality
+//         doShare();
+//     });
+// }
+//
+// // reset transform
+// contentEl.style.webkitTransform = contentEl.style.transform = '';
+//
+// // move back the container (css transition)
+// if( translateVal !== -shareWrapH ) {
+//     classie.add(contentEl, 'container--reset');
+//     onEndTransition(contentEl, function() {
+//         classie.remove(contentEl, 'container--reset');
+//     });
+// }
+}
+
+
+var contentEl = $('.container');
+// touch events
+contentEl.on('touchstart', touchStart);
+contentEl.on('touchmove', touchMove);
+contentEl.on('touchend', touchEnd);

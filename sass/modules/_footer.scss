@@ -1,0 +1,63 @@
+@import "../base/variables";
+
+footer {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	height: 150px;
+	padding: 20px $padding;
+	background-color: white;
+
+	@include respond-to(belowIpad) {
+		padding: 20px;
+	}
+	.footer__filet {
+		position: absolute;
+		top: 0;
+		left: $padding;
+		width: calc(100% - 80px);
+		height: 1px;
+		background-color: $font;
+		@include respond-to(belowIpad) {
+			width: calc(100% - 40px);
+			left: 20px;
+		}
+	}
+	.footer__wrapper {
+		display: flex;
+		justify-content: space-between;
+		.footer__item_logos {
+			width: 50px;
+			height: 110px;
+			float: left;
+			margin-right: 40px;
+			@include respond-to(belowIpad) {
+				display: none;
+			}
+			img {
+				width: 50px;
+				height: 50px;
+				&:first-of-type {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.footer__item {
+			width: 25%;
+			@include respond-to(belowIpad) {
+				width: 33.3%;
+				word-wrap: break-word;
+			}
+		}
+		li {
+			margin-bottom: 5px;
+		}
+		.footer__item_address {
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

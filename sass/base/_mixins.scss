@@ -1,0 +1,35 @@
+@mixin rounded-corner($arc) {
+	-moz-border-radius: $arc;
+	-webkit-border-radius: $arc;
+	border-radius: $arc;
+}
+
+@mixin transition($name, $time, $effect, $delay) {
+	-webkit-transition: $name $time $effect $delay;
+	-moz-transition: $name $time $effect $delay;
+	-ms-transition: $name $time $effect $delay;
+	-o-transition: $name $time $effect $delay;
+	transition: $name $time $effect $delay;
+}
+
+@mixin box-shadow($inset, $hoff, $voff, $blur, $color) {
+	-webkit-box-shadow: $inset $hoff $voff $blur $color;
+	-moz-box-shadow: $inset $hoff $voff $blur $color;
+	box-shadow: $inset $hoff $voff $blur $color;
+}
+
+@mixin paragraph($lineHeight, $lineNbr) {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lineNbr; /* number of lines to show */
+	max-height: ($lineHeight * $lineNbr) + px;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}

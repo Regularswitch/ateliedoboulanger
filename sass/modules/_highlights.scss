@@ -1,0 +1,44 @@
+// TODO: remplacer dans sobre
+.highlights {
+	width: 100%;
+	height: auto;
+
+	.highlights__items {
+		width: 33.3%;
+		float: left;
+		margin-bottom: 40px;
+		text-align: left;
+	}
+	@include respond-to(aboveDesktop) {
+		.highlights__items:nth-of-type(3n + 1) {
+			padding-right: 20px;
+		}
+		.highlights__items:nth-of-type(3n + 2) {
+			padding: 0 10px;
+		}
+		.highlights__items:nth-of-type(3n) {
+			padding-left: 20px;
+		}
+	}
+
+	//@include respond-to(belowDesktop) {
+	@media only screen and (max-width: 1024px) and (min-width: 768px) {
+		.highlights__items {
+			width: 50%;
+			padding: 0;
+
+		}
+		.highlights__items:nth-of-type(2n + 1) {
+			padding-right: 10px;
+		}
+		.highlights__items:nth-of-type(2n) {
+			padding-left: 10px;
+		}
+	}
+	@include respond-to(belowIpad) {
+		.highlights__items {
+			width: 100%;
+			padding: 0;
+		}
+	}
+}

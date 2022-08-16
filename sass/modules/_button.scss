@@ -1,0 +1,55 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.button {
+	font-family: $fontBold;
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 40px;
+	width: 100%;
+	cursor: pointer;
+
+	background-color: $white;
+	border: 1px solid $blue;
+	@include rounded-corner(3px);
+	color: $blue;
+
+	transition: all .3s ease-out;
+	text-decoration: none;
+	a {
+		text-decoration: none;
+		color:inherit;
+	}
+	&:hover {
+		&:not(.inactive) {
+			background-color: $blue;
+			color: $white;
+			&.button__border {
+				border-color: $white;
+			}
+		}
+	}
+
+	&.red {
+		color: $red;
+		border: 1px solid $red;
+		&:hover {
+			background-color: $red;
+			color: $white;
+		}
+	}
+	&.inactive {
+		opacity: .5;
+		cursor: default;
+		a {
+			cursor: default;
+		}
+	}
+}

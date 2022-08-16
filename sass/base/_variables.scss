@@ -1,0 +1,193 @@
+// Color
+$white: #FFFFFF;
+$black: #000000;
+$blue: #0E45DE;
+$blueHover: #4871E4;
+$red: #E22000;
+$redFade: #FFBDB2;
+$redHover: #DF7261;
+$green: #B2E0D6;
+$greenDark: #2A6C5D;
+$grey: #F7F5F5;
+$greyDark: #cccccc;
+$font: #313131;
+
+// Fonts
+$fontLight: 'BrandonLight';
+$fontRegular: 'BrandonRegular';
+$fontMedium: 'BrandonMedium';
+$fontBold: 'BrandonBold';
+$fontBlack: 'BrandonBlack';
+
+// Titles
+h1 {
+	font-family: $fontBlack;
+	font-size: 65px;
+	line-height: 65px;
+	text-transform: uppercase;
+	margin: 0;
+
+	position: relative;
+	span {
+		position: absolute;
+		top: -20px;
+		left: 0;
+
+		width: 60px;
+		height: 4px;
+
+		background-color: $blue;
+	}
+	&.regular, .regular {
+		font-family: $fontRegular;
+	}
+	@include respond-to(belowIpad) {
+		font-size: 13vw;
+		line-height: 13vw;
+	}
+}
+
+h2 {
+	font-family: $fontBlack;
+	font-size: 40px;
+	line-height: 45px;
+	text-transform: uppercase;
+
+	&.regular {
+		font-family: $fontRegular;
+	}
+	@include respond-to(belowIpad) {
+		font-size: 10vw;
+		line-height: 11vw;
+	}
+}
+
+h3 {
+	font-family: $fontRegular;
+	font-size: 35px;
+	line-height: 35px;
+	text-transform: uppercase;
+	&.black, .black {
+		font-family: $fontBlack;
+	}
+}
+
+h4 {
+	font-family: $fontRegular;
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	&.active, .active, &.black, .black {
+		font-family: $fontBlack;
+	}
+	&.blue, .blue {
+		color: $blue;
+	}
+	&.bold, .bold, strong {
+		font-family: $fontBold;
+	}
+	&.centered {
+		text-align: center;
+	}
+}
+
+h5 {
+	font-family: $fontBlack;
+	font-size: 25px;
+	line-height: 25px;
+	&.regular, .regular {
+		font-family: $fontRegular;
+	}
+	&.upper, .upper {
+		text-transform: uppercase;
+	}
+	&.centered {
+		text-align: center;;
+	}
+}
+
+.text {
+	font-family: $fontRegular;
+	font-size: 20px;
+	line-height: 22px;
+	color: $font;
+	&.bold, .bold, strong {
+		font-family: $fontBold;
+	}
+	&.blue, .blue {
+		color: $blue;
+	}
+	&.red, .red {
+		color: $red;
+	}
+	&.green, .green {
+		color: $green;
+	}
+	&.white, .white {
+		color: $white;
+	}
+	&.fontBlack, .fontBlack {
+		font-family: $fontBlack;
+	}
+	&.upper, .upper {
+		text-transform: uppercase;
+	}
+}
+
+.text--number {
+	font-family: $fontBlack;
+	font-size: 200px;
+	line-height: 165px;
+	color: $white;
+}
+
+.text--footer, .text--footer a {
+	font-family: $fontMedium;
+	font-size: 13px;
+	line-height: 15px;
+	color: $font;
+	text-decoration: none;
+	&.upper, .upper {
+		text-transform: uppercase;
+	}
+}
+
+.text--footer a:hover {
+	font-family: $fontBold;
+}
+
+h1, h2, h3, h4, h5, .text--number {
+	color: $white;
+	&.black, .black {
+		color: $font;
+	}
+	&.blue, .blue {
+		color: $blue;
+	}
+	&.red, .red {
+		color: $red;
+	}
+	&.white, .white {
+		color: white;
+	}
+	&.firstBlue {
+		color: $red;
+		&::first-line {
+			color: $blue;
+		}
+	}
+}
+
+// Layers
+$zBackground: -10;
+$zLogo: 50;
+$zMenu: 500;
+$zMessage: 500;
+
+// Padding
+$padding: 40px;
+
+// Filets
+.filet__bottom {
+	border-bottom: 1px solid white;
+}

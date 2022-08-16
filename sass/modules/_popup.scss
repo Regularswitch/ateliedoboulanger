@@ -1,0 +1,148 @@
+.popup {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.1s ease-in-out;
+
+  display: block;
+
+  &.opened {
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .popupwrapper {
+    position: absolute;
+    width: 700px;
+    max-height: 600px;
+    height:80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    color: $font;
+    padding: 40px;
+    overflow: hidden;
+
+    @include respond-to(belowIpad) {
+      height: 90%;
+      width: 90%;
+      padding: 20px;
+    }
+
+    .popup_close {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+
+      @include respond-to(belowIpad) {
+        top: 20px;
+        right: 20px;
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+        * {
+          stroke: $blue;
+        }
+      }
+    }
+    .mobile__container {
+      //display: flex;
+      //flex-direction: column;
+      //align-items: stretch;
+      //justify-content: space-between;
+      overflow-y: scroll;
+      height: 100%;
+      @include respond-to(belowIpad) {
+        height: 100%;
+        overflow-y: scroll;
+      }
+
+      .popup__header {
+        width: 100%;
+        height: auto;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid $blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .popup__header_logo {
+          width: 85px;
+          padding-right: 10px;
+          flex: 1;
+        }
+
+        .popup__header_title {
+          width: calc(100% - 100px);
+          height: auto;
+          padding-left: 10px;
+          flex: 7;
+
+          @include respond-to(belowIpad) {
+            h2 {
+              font-size: 8vw;
+              line-height: 9vw;
+            }
+          }
+        }
+      }
+      .popup__content_title {
+        width: 100%;
+        padding: 20px 0;
+        h4 {
+          margin: 0;
+        }
+      }
+
+      .popup__content {
+        display: flex;
+        margin-bottom: 40px;
+
+        @include respond-to(belowIpad) {
+          display: initial;
+        }
+
+        .popup__content_left {
+          padding-right: 10px;
+          flex: 1;
+          @include respond-to(belowIpad) {
+            margin-bottom: 20px;
+            padding: 0;
+          }
+        }
+        .popup__content_right {
+          padding-left: 10px;
+          flex: 1;
+          @include respond-to(belowIpad) {
+            margin-bottom: 20px;
+            padding: 0;
+          }
+        }
+      }
+      .button_contato {
+        width: 50%;
+        margin: 0 auto;
+        text-decoration: none;
+
+        text-align: center;
+        @include respond-to(belowIpad) {
+          width: 100%;
+          padding: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+

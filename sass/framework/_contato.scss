@@ -1,0 +1,138 @@
+@import "../base/variables";
+
+//TODO finir les picto et faire le responsive pour ipad et iphone (attente design)
+
+.contato {
+  padding: 80px 40px 0 40px;
+  position: relative;
+
+  padding: 80px 30px 0 30px;
+
+  .contato__header {
+	width: auto;
+	margin-bottom: 80px;
+  }
+
+  .contato__form {
+	width: 60%;
+
+	z-index: 100;
+	position: relative;
+
+	@include respond-to(belowIpadInc) {
+	  width: 100%;
+	}
+
+	.contato__form_button {
+	  width: 200px;
+	  float: right;
+	}
+
+	input[type=submit] {
+	  border: 1px solid rgba(14, 69, 222, 1);
+	}
+
+	.champ {
+	  border: 1px solid rgba(14, 69, 222, 0.5);
+
+	  &::-webkit-input-placeholder {color: rgba(14, 69, 222, 0.5);}
+	  &:-moz-placeholder {color: rgba(14, 69, 222, 0.5);}
+	  &::-moz-placeholder {color: rgba(14, 69, 222, 0.5);}
+	  &:-ms-input-placeholder {color: rgba(14, 69, 222, 0.5);}
+
+	  &:hover {
+		border: 1px solid rgba(14, 69, 222, 1);
+
+		&::-webkit-input-placeholder {color: rgba(14, 69, 222, 1);}
+		&:-moz-placeholder {color: rgba(14, 69, 222, 1);}
+		&::-moz-placeholder {color: rgba(14, 69, 222, 1);}
+		&:-ms-input-placeholder {color: rgba(14, 69, 222, 1);}
+	  }
+	  &:focus {
+		border: 1px solid rgba(14, 69, 222, 1);
+
+		&::-webkit-input-placeholder {color: rgba(14, 69, 222, 1);}
+		&:-moz-placeholder {color: rgba(14, 69, 222, 1);}
+		&::-moz-placeholder {color: rgba(14, 69, 222, 1);}
+		&:-ms-input-placeholder {color: rgba(14, 69, 222, 1);}
+	  }
+
+	}
+  }
+
+  .contato__pictos_container {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.picto2__blue {
+	  position: absolute;
+	  top: 220px;
+	  right: 120px;
+	  @include respond-to(belowIpad) {
+		top: 80px;
+		right: 50px;
+	  }
+	}
+	.picto5__blue {
+	  position: absolute;
+	  top: 430px;
+	  right: 340px;
+
+	  @include respond-to(belowIpad) {
+		display: none;
+	  }
+	}
+	.picto7__blue {
+	  position: absolute;
+	  top: 160px;
+	  right: 570px;
+	  transform: rotate(180deg);
+	}
+	.picto3__rgba {
+	  position: absolute;
+	  top: 330px;
+	  right: 350px;
+	  transform: rotate(20deg);
+
+	  @include respond-to(belowIpad) {
+		display: none;
+	  }
+	}
+
+	.pain16 {
+	  height: 690px;
+	  width: 310px;
+	  z-index: -2;
+	  position: absolute;
+	  top: 100px;
+	  right: 40px;
+	  transform: rotate(-13deg);
+	}
+	.pain10 {
+	  width: 500px;
+	  z-index: -1;
+	  position: absolute;
+	  top: 280px;
+	  right: 260px;
+	  transform: rotate(-60deg);
+	  @include respond-to(belowIpad) {
+		display: none;
+	  }
+	}
+
+	.pain04 {
+	  position: absolute;
+	  top: 330px;
+	  right: -100px;
+	}
+	.pain03 {
+	  z-index: -1;
+	  position: absolute;
+	  top: 500px;
+	  right: 380px;
+	}
+  }
+}

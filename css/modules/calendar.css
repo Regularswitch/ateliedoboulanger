@@ -1,0 +1,86 @@
+/*
+Error: Undefined variable: "$baseSize".
+        on line 30 of C:/Applis/xampp/htdocs/sites/ateliedoboulanger/wp-content/themes/rsw-ateliedob/sass/modules/calendar.scss
+
+25:     box-sizing: border-box;
+26:     width: 100%;
+27:   }
+28:   &__thead  {
+29:     height: 3.813em;
+30:     padding: ($baseSize / 2);
+31:     z-index: 2;
+32:     background-color: $gray;
+33:     color: $white;
+34:     box-shadow: 0 .1em 1em 0 rgba($black, .25),
+35:     0 .1em .5em 1px rgba($black, .35),
+
+Backtrace:
+C:/Applis/xampp/htdocs/sites/ateliedoboulanger/wp-content/themes/rsw-ateliedob/sass/modules/calendar.scss:30
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/script/tree/operation.rb:64:in `_perform'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
+C:/Appli/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+C:/Appli/Ruby200-x64/bin/compass:23:in `load'
+C:/Appli/Ruby200-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$baseSize\".\A         on line 30 of C:/Applis/xampp/htdocs/sites/ateliedoboulanger/wp-content/themes/rsw-ateliedob/sass/modules/calendar.scss\A \A 25:     box-sizing: border-box;\A 26:     width: 100%;\A 27:   }\A 28:   &__thead  {\A 29:     height: 3.813em;\A 30:     padding: ($baseSize / 2);\A 31:     z-index: 2;\A 32:     background-color: $gray;\A 33:     color: $white;\A 34:     box-shadow: 0 .1em 1em 0 rgba($black, .25),\A 35:     0 .1em .5em 1px rgba($black, .35),"; }

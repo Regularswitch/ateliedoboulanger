@@ -1,0 +1,109 @@
+@import "../base/variables";
+
+.formSuccess {
+  margin-bottom: 20px;
+  transition: all 0.3s ease-out;
+  color: $blue;
+  font-weight: bold;
+  &.show {
+    display: block;
+  }
+}
+
+.formError {
+  @extend .formSuccess;
+  color: $red !important;
+}
+
+form {
+  input, textarea {
+    border: 1px solid $blue;
+    margin-bottom: 20px;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 3px;
+    font-family: $fontRegular;
+    color: $blue;
+    font-size: 25px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.button{
+      padding: initial;
+    }
+    hover{
+
+    }
+  }
+
+  textarea {
+    min-height:200px;
+    max-height: 300px;
+  }
+
+  .input50_left {
+    width: calc(50% - 20px);
+    float: left;
+    margin-right: 20px;
+
+    @include respond-to(belowIpad) {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+  }
+
+  .input50_right {
+    width: 50%;
+    float: left;
+
+    @include respond-to(belowIpad) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .input100 {
+    width: 100%;
+  }
+
+  .input30_left {
+    width:calc(33.3% - 20px);
+    margin-right: 5px;
+    float: left;
+    @include respond-to(belowIpad) {
+      width: 100%;
+      float: none;
+    }
+  }
+  .input30_middle {
+    width:33.3%;
+    margin: 0 5px 20px 5px;
+    float: left;
+    @include respond-to(belowIpad) {
+      width: 100%;
+      float: none;
+    }
+  }
+  .input30_right {
+    width:33.3%;
+    margin-left: 5px;
+    float: right;
+    @include respond-to(belowIpad) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+
+  @include placeholder {
+    font-family: $fontRegular;
+    color: $blue;
+    font-size: 25px;
+    line-height: 36px;
+  }
+}
+
+

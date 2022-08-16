@@ -1,0 +1,50 @@
+@mixin respond-to($media) {
+  @if $media == belowIpad {
+    @media only screen and (max-width : 767px) { @content; }
+  }
+  @else if $media == belowIpadInc {
+    @media only screen and (max-width : 768px) { @content; }
+  }
+  @else if $media == aboveIpad {
+    @media only screen and (min-width : 769px) { @content; }
+  }
+  @else if $media == aboveIpadInc {
+    @media only screen and (min-width : 768px) { @content; }
+  }
+  @else if $media == belowDesktopM {
+    @media only screen and (max-width : 1023px) { @content; }
+  }
+  @else if $media == belowDesktop {
+    @media only screen and (max-width : 1024px) { @content; }
+  }
+  @else if $media == aboveDesktop {
+    @media only screen and (min-width : 1025px) { @content; }
+  }
+  @else if $media == aboveDesktopInc {
+    @media only screen and (min-width : 1024px) { @content; }
+  }
+  @else if $media == titleLimit {
+    @media only screen and (max-width : 1024px) { @content; }
+  }
+  @else if $media == ipad-portrait {
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) { @content; }
+  }
+}
+
+/* USAGE
+*
+*
+* .test {
+*  width: 500px;
+*  float: left;
+*  @include respond-to(phone) { width: 100% ;}
+*  @include respond-to(ipad) { width: 125px; }
+*  @include respond-to(desktop) { float: none; }
+*  @include respond-to(iphone) { width: 100% ; }
+*  @include respond-to(phone-portrait) { float: none; }
+*}
+*
+*/

@@ -1,0 +1,133 @@
+@import "../base/queries";
+@import "../base/variables";
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #ffffff;
+	overflow-x: hidden;
+	&.atelie20{
+		background-color: #E6E6E6;
+	}
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 80px auto 0 auto;
+	overflow: hidden;
+	position: relative;
+
+  .wrapper__footer {
+	height: 300px;
+	padding: 0 $padding $padding $padding;
+	margin-bottom: $padding;
+	text-align: center;
+	@include respond-to(belowIpad) {
+	  height: 620px;
+	  margin-bottom: 20px;
+	  padding: 0 20px 20px 20px;
+
+	}
+	.wrapper__footer_newsletter {
+		display: none;
+	  position: relative;
+	  width: 300px;
+	  height: 300px;
+	  margin-right: 20px;
+	  padding: 40px 20px;
+	  float: left;
+	  background-color: $red;
+	  @include rounded-corner(3px);
+
+	  @include respond-to(belowIpad) {
+		width: 100%;
+		margin-right: 0;
+		float: none;
+		margin-bottom: 20px;
+	  }
+	  h5 {
+		margin-bottom: 40px;
+	  }
+	  .button {
+		position: absolute;
+		bottom: 40px;
+		width: 150px;
+		left: 50%;
+		transform: translateX(-50%);
+	  }
+	}
+	#map {
+	  height: 300px;
+	  width: 100%; //calc(100% - 320px);
+	  float: left;
+	  @include respond-to(belowIpad) {
+		width: 100%;
+		float: none;
+	  }
+	}
+  }
+}
+
+.clear {
+  @extend .clearfix;
+}
+
+.no-ipad {
+  @include respond-to(belowDesktop) {
+	display: none !important;
+  }
+}
+
+.no-desktop {
+  @include respond-to(aboveDesktop) {
+	display: none !important;
+  }
+}
+
+.no-iphone {
+  @include respond-to(belowIpad) {
+	display: none !important;
+  }
+}
+
+.ipad-only {
+  @include respond-to(aboveDesktopInc) {
+	display: none !important;
+  }
+}
+
+.iphone-only {
+  @include respond-to(aboveIpadInc) {
+	display: none !important;
+  }
+}
+
+// Filets
+.filet--right {
+  border-right: 1px solid $white;
+}
+
+.filet--bottom {
+  border-bottom: 1px solid $white;
+}
+
+.filetV {
+  display: block;
+  height: 100%;
+  width: 2px;
+  background-color: $white;
+  margin: 0 10px;
+}
+
+.separator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px solid;
+  border-color: white;
+}

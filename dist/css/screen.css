@@ -4983,7 +4983,7 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
 @media only screen and (max-width: 767px) {
   .cursos .cursos__header .cursos__header_onglets h4 {
     margin-right: 0;
-    font-size: 21px;
+    font-size: 14px;
   }
 }
 .cursos .cursos__header .cursos__header_onglets .lineIndicator {
@@ -10068,9 +10068,9 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
   padding: 0;
   left: 0;
   right: 0;
-  width: 80%;
+  width: 70%;
   height: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
   border: none;
 }
 .popup-curso::backdrop {
@@ -10081,13 +10081,13 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
   display: grid;
   width: 100%;
   background-color: #fff;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 1fr 200px;
   justify-items: center;
 }
 
 .popup-curso__info-title {
   width: 100%;
-  height: 190px;
+  min-height: 190px;
   background: #E22000;
   color: #fff;
   padding: 2rem;
@@ -10195,7 +10195,7 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
   display: block;
   font-style: normal;
   font-weight: 450;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 31px;
   text-align: center;
   text-transform: uppercase;
@@ -10225,6 +10225,10 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
 
 .popup-curso__info-title-close {
   cursor: pointer;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  
 }
 
 .open__popup_card {
@@ -10265,15 +10269,15 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
 
 @media only screen and (max-width: 767px) {
   .popup-curso__instrutor {
-    position: absolute;
-    height: 30%;
-    bottom: 0;
+    /* position: absolute; */
+    /* height: 30%; */
+    /* bottom: 0; */
   }
   .open__popup_card {
     grid-template-columns: 1fr;
   }
   .popup-curso__inner {
-    position: relative;
+    /* position: relative; */
     grid-template-columns: 1fr;
   }
 
@@ -10292,17 +10296,17 @@ h1.firstBlue::first-line, h2.firstBlue::first-line, h3.firstBlue::first-line, h4
     width: 100%;
   } */
   .popup-curso__info-title {
-    height: 160px;
+    min-height: 160px;
   }
   .popup-curso__info {
     /* height: 30%; */
     /* overflow: hidden; */
   }
   .popup-curso__info-info {
-    display: block;
-    height: 50%;
+    /* display: block; */
+    /* height: 50%; */
     font-size: 16px;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
   .popup-curso__instrutor-img {
     display: none;

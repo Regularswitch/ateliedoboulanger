@@ -70,11 +70,30 @@
                      alt="">
             </div>
             <div class="home__header_content">
-                <div class="home__header_box1">
-                    <h3 class="black white"><?= __('Agendar', 'Home'); ?></h3>
-                    <h3><?= __('Um curso', 'Home'); ?></h3>
-                    <a href="<?= $cursosPage ?>/#calendar" class="button button__border"><?= __('Ver o calendário', 'Home'); ?></a>
-                </div>
+				
+					<div class="home__header_box1 home__header_matricula" style="background-color: #E22000;">
+
+						<h3 class="black white"><?= __('MATRICULAS', 'Home'); ?></h3>
+						<h3><?= __('ABERTAS', 'Home'); ?></h3>
+						<a 
+						   
+						   href="https://tinyurl.com/qwpsy5y" 
+						   target="_blank" 
+						   class="button button__border button_matricula"
+						   style="color: var(--cor1,  #E22000); border-color: var(--cor1,  #E22000); "
+						   >
+							<?= __('INSCREVA-SE', 'Home'); ?>
+						</a>
+					</div>
+
+					<div class="home__header_box1">
+						<h3 class="black white"><?= __('Agendar', 'Home'); ?></h3>
+						<h3><?= __('Um curso', 'Home'); ?></h3>
+						<a href="<?= $cursosPage ?>/#calendar" class="button button__border">
+							<?= __('Ver o calendário', 'Home'); ?>
+						</a>
+					</div>
+				
                 <a class="home__header_box2" href="<?= $cursosPage ?>">
                     <h3 class="black white"><?= __('VEJA OS CURSOS DISPONIVEIS', 'Home'); ?></h3>
                     <div class="box2__bg"></div>

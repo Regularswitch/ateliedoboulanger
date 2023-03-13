@@ -29,6 +29,23 @@
 			.cursos .cursos__specials .cursos__specials_box .cursos__specials_boxcontent .box__right .box__right_bottom .box__bottom_price{display: none;}	
 			.box__bottom_price{display: none;}
 		};
+		
+		.button_matricula { 
+			--cor1: #E22000;
+			color: #E22000 !important;
+			border-color:#E22000 !important;
+}
+
+		.button_matricula:hover {
+			color: #FFF !important;
+			background-color: #E22000 !important;
+			border-color: #fff !important;
+		}
+		@media (max-width: 768px) {
+			.home__header_matricula {
+				margin-bottom:50px !important;
+			}
+		}
 	</style>
     </body>
 </html>

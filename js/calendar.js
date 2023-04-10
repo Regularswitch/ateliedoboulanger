@@ -138,13 +138,11 @@ Cal.prototype.backToCurrMonth = function () {
     $('#btnPrev').addClass('inactive');
 };
 
-Cal.prototype.backToCurrMonth2 = function () {
+Cal.prototype.backToCurrMonthStep = function () {
     this.cpt = -1;
     var d = new Date();
     var year = d.getFullYear();
-    // var month = d.getMonth();
     this.currYear = year;
-    // this.currMonth = month;
     this.checkLastMonth(year, (this.currMonth - 1));
     this.showMonth(year, this.currMonth);
     $('.today').trigger('click');
@@ -155,12 +153,15 @@ Cal.prototype.attachListener = function () {
     var self = this;
     $('#btnNext').on('click', function () {
         self.nextMonth();
+        self.backToCurrMonthStep();
     });
     $('#btnPrev').on('click', function () {
         self.previousMonth();
+        self.backToCurrMonthStep();
     });
     $('#btnCurrMonth').on('click', function () {
         self.backToCurrMonth();
+        self.backToCurrMonthStep();
     });
     $('.firstDay, .middleDay, .lastDay, .firstLastDay').on('click', function () {
         $('.normal, .today, .not-current').removeClass('active');

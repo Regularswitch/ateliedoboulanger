@@ -1,7 +1,7 @@
 var eventsList;
 function setEvents(events) {
     eventsList = events;
-    // console.log(events);
+    console.log(events);
 }
 
 

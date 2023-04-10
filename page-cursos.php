@@ -52,7 +52,7 @@ Template Name: Cursos template
         $postsEvents = get_posts( $queryEvents);
 
         if(isset($_GET['d'])) {
-            var_dump($postsNivels);
+            var_dump($queryEvents);
 
         }
 

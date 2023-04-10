@@ -51,13 +51,7 @@ Template Name: Cursos template
         );
         $postsEvents = get_posts( $queryEvents);
 
-        if(isset($_GET['d'])) {
-            echo "<pre>";
-            var_dump($queryEvents);
-            echo "</pre>";
-
-        }
-
+        
 
 
         ?>
@@ -388,6 +382,14 @@ Template Name: Cursos template
                         'raw' => $dateStartRaw
                     ));
                 }
+
+                if(isset($_GET['d'])) {
+                    echo "<pre>";
+                    var_dump($eventsList);
+                    echo "</pre>";
+        
+                }
+        
             ?>
 
             <script>

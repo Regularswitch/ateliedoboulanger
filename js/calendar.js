@@ -101,7 +101,7 @@ Cal.prototype.previousMonth = function () {
 // Show current month
 Cal.prototype.showcurr = function () {
     var self = this;
-    console.log(this.currYear);
+    // console.log(this.currYear);
     this.showMonth(this.currYear, this.currMonth);
     var d = new Date();
     var year = d.getFullYear();

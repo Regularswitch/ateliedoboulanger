@@ -1,7 +1,7 @@
 var eventsList;
 function setEvents(events) {
     eventsList = events;
-    console.log(events);
+    // console.log(events);
 }
 
 
@@ -134,6 +134,19 @@ Cal.prototype.backToCurrMonth = function () {
     this.currMonth = month;
     this.checkLastMonth(year, (month - 1));
     this.showMonth(year, month);
+    $('.today').trigger('click');
+    $('#btnPrev').addClass('inactive');
+};
+
+Cal.prototype.backToCurrMonth2 = function () {
+    this.cpt = -1;
+    var d = new Date();
+    var year = d.getFullYear();
+    // var month = d.getMonth();
+    this.currYear = year;
+    // this.currMonth = month;
+    this.checkLastMonth(year, (this.currMonth - 1));
+    this.showMonth(year, this.currMonth);
     $('.today').trigger('click');
     $('#btnPrev').addClass('inactive');
 };

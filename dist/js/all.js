@@ -1834,17 +1834,17 @@ function setEvents(events) {
     // console.log(events);
 }
 
+
 var Cal = function (divId) {
-	let currentLang    = document.getElementsByTagName('html')[0].getAttribute('lang');
-    this.cpt           = -1;
+    this.cpt = -1;
     this.cursoDuration = -2;
-    this.currCurso     = '';
+    this.currCurso = '';
 
     //Store div id
     this.divId = divId;
 
     // Days of week, starting on Sunday
-    this.DaysOfWeek = currentLang == 'pt-br' ? [
+    this.DaysOfWeek = [
         'dom',
         'seg',
         'ter',
@@ -1852,8 +1852,8 @@ var Cal = function (divId) {
         'qui',
         'séx',
         'sab'
-    ] : ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-    this.DaysOfWeekFull = currentLang == 'pt-br' ? [
+    ];
+    this.DaysOfWeekFull = [
         'domingo',
         'segunda',
         'terça',
@@ -1861,30 +1861,18 @@ var Cal = function (divId) {
         'quinta',
         'séxta',
         'sábado'
-    ] : ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    ];
 
-    this.Months = currentLang == 'pt-br' ? ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'] 
-	: [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	]
+    // Months, starting on January
+    // this.Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    this.Months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
     // Set the current month, year
     var d = new Date();
 
     this.currMonth = d.getMonth();
-    this.currYear  = d.getFullYear();
-    this.currDay   = d.getDate();
+    this.currYear = d.getFullYear();
+    this.currDay = d.getDate();
     // console.log(this.currDay);
 };
 
@@ -1943,7 +1931,7 @@ Cal.prototype.previousMonth = function () {
 // Show current month
 Cal.prototype.showcurr = function () {
     var self = this;
-    console.log(this.currYear);
+    // console.log(this.currYear);
     this.showMonth(this.currYear, this.currMonth);
     var d = new Date();
     var year = d.getFullYear();
@@ -1980,16 +1968,30 @@ Cal.prototype.backToCurrMonth = function () {
     $('#btnPrev').addClass('inactive');
 };
 
+Cal.prototype.backToCurrMonthStep = function () {
+    this.cpt = -1;
+    var d = new Date();
+    var year = d.getFullYear();
+    this.currYear = year;
+    this.checkLastMonth(year, (this.currMonth - 1));
+    this.showMonth(year, this.currMonth);
+    $('.today').trigger('click');
+    $('#btnPrev').addClass('inactive');
+};
+
 Cal.prototype.attachListener = function () {
     var self = this;
     $('#btnNext').on('click', function () {
         self.nextMonth();
+        self.backToCurrMonthStep();
     });
     $('#btnPrev').on('click', function () {
         self.previousMonth();
+        self.backToCurrMonthStep();
     });
     $('#btnCurrMonth').on('click', function () {
         self.backToCurrMonth();
+        self.backToCurrMonthStep();
     });
     $('.firstDay, .middleDay, .lastDay, .firstLastDay').on('click', function () {
         $('.normal, .today, .not-current').removeClass('active');
@@ -2142,7 +2144,7 @@ Cal.prototype.showMonth = function (y, m) {
     var html = '<table>';
 
     // Write selected month and year
-    html += '<div><button id="btnCurrMonth" class="text red" type="button"><?= __("Ir para hoje", "calendario"); ?></button></div>';
+    html += '<div><button id="btnCurrMonth" class="text red" type="button">Ir para hoje</button></div>';
     html += '<thead><tr>';
     html += '<td colspan="1" class="red">' +
         '<button id="btnPrev" type="button">' +
@@ -2330,7 +2332,6 @@ window.onload = function () {
     }
 
 };
-
 //-------------------------//
 //------ SCRIPT NAME ------//
 //--- Created by RSW --//
@@ -3188,7 +3189,7 @@ var closePopup = function (offsetY) {
         wrapper.scrollTop(offsetY);
     }
     $('body').css({'position': 'static'});
-    //$(window).scrollTop(offsetY);
+    $(window).scrollTop(offsetY);
 };
 jQuery('document').ready(function ($) {
 
